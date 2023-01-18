@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D2BC966292C2B0C00A940F0 /* WACenterMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BC965292C2B0C00A940F0 /* WACenterMarkView.swift */; };
+		2D2BC968292C2F8900A940F0 /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BC967292C2F8900A940F0 /* TargetView.swift */; };
+		2D5F4EE8292B984600F36311 /* Hit+Round+ShootingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F4EE7292B984600F36311 /* Hit+Round+ShootingSession.swift */; };
+		2D5F4EEB292B99F000F36311 /* TargetScoreZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F4EEA292B99F000F36311 /* TargetScoreZone.swift */; };
+		2D5F4EEE292B9D2A00F36311 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F4EED292B9D2A00F36311 /* ColorExtension.swift */; };
+		2D5F4EF0292BA16B00F36311 /* TargetFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F4EEF292BA16B00F36311 /* TargetFace.swift */; };
+		2D61EE34293140B800CAF482 /* ShootingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE33293140B800CAF482 /* ShootingViewModel.swift */; };
+		2D61EE3729315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE3529315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld */; };
+		2D61EE3A29316DAB00CAF482 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE3929316DAB00CAF482 /* CoreDataManager.swift */; };
+		2D61EE3C29316E2600CAF482 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE3B29316E2600CAF482 /* CoreDataViewModel.swift */; };
+		2D9EF0092929368800AE8505 /* SwiftUI_GesturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EF0082929368800AE8505 /* SwiftUI_GesturesApp.swift */; };
+		2D9EF00B2929368800AE8505 /* ShootingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EF00A2929368800AE8505 /* ShootingView.swift */; };
+		2D9EF00D2929368C00AE8505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9EF00C2929368C00AE8505 /* Assets.xcassets */; };
+		2D9EF0102929368C00AE8505 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */; };
+		2DAB0B922929680400C49D93 /* VisibilityViewExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB0B912929680400C49D93 /* VisibilityViewExtension .swift */; };
+		2DDBD5E1293E3B5E0079DE2C /* MeasureSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBD5E0293E3B5E0079DE2C /* MeasureSize.swift */; };
+		2DE31F69292E4C59007B7A19 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE31F68292E4C59007B7A19 /* CGPointExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D2BC965292C2B0C00A940F0 /* WACenterMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WACenterMarkView.swift; sourceTree = "<group>"; };
+		2D2BC967292C2F8900A940F0 /* TargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
+		2D5F4EE7292B984600F36311 /* Hit+Round+ShootingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hit+Round+ShootingSession.swift"; sourceTree = "<group>"; };
+		2D5F4EEA292B99F000F36311 /* TargetScoreZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetScoreZone.swift; sourceTree = "<group>"; };
+		2D5F4EED292B9D2A00F36311 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		2D5F4EEF292BA16B00F36311 /* TargetFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetFace.swift; sourceTree = "<group>"; };
+		2D61EE33293140B800CAF482 /* ShootingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingViewModel.swift; sourceTree = "<group>"; };
+		2D61EE3629315F4300CAF482 /* LukisArcheryScorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LukisArcheryScorer.xcdatamodel; sourceTree = "<group>"; };
+		2D61EE3929316DAB00CAF482 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2D61EE3B29316E2600CAF482 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		2D9EF0052929368800AE8505 /* SwiftUI Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Gestures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D9EF0082929368800AE8505 /* SwiftUI_GesturesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GesturesApp.swift; sourceTree = "<group>"; };
+		2D9EF00A2929368800AE8505 /* ShootingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingView.swift; sourceTree = "<group>"; };
+		2D9EF00C2929368C00AE8505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2DAB0B912929680400C49D93 /* VisibilityViewExtension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisibilityViewExtension .swift"; sourceTree = "<group>"; };
+		2DDBD5E0293E3B5E0079DE2C /* MeasureSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureSize.swift; sourceTree = "<group>"; };
+		2DE31F68292E4C59007B7A19 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D9EF0022929368800AE8505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D5F4EE9292B99C400F36311 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D61EE3529315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld */,
+				2D5F4EE7292B984600F36311 /* Hit+Round+ShootingSession.swift */,
+				2D5F4EEA292B99F000F36311 /* TargetScoreZone.swift */,
+				2D5F4EEF292BA16B00F36311 /* TargetFace.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D5F4EEC292B9CFC00F36311 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB0B912929680400C49D93 /* VisibilityViewExtension .swift */,
+				2D5F4EED292B9D2A00F36311 /* ColorExtension.swift */,
+				2DE31F68292E4C59007B7A19 /* CGPointExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D5F4EF1292BA17900F36311 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DDBD5E0293E3B5E0079DE2C /* MeasureSize.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D61EE322931408000CAF482 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D61EE3B29316E2600CAF482 /* CoreDataViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		2D61EE3829316D8800CAF482 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2D61EE3929316DAB00CAF482 /* CoreDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2D61EE3D293A2A5E00CAF482 /* ShootingView */ = {
+			isa = PBXGroup;
+			children = (
+				2D9EF00A2929368800AE8505 /* ShootingView.swift */,
+				2D61EE33293140B800CAF482 /* ShootingViewModel.swift */,
+			);
+			path = ShootingView;
+			sourceTree = "<group>";
+		};
+		2D61EE3E293A2AE500CAF482 /* TargetView */ = {
+			isa = PBXGroup;
+			children = (
+				2D2BC965292C2B0C00A940F0 /* WACenterMarkView.swift */,
+				2D2BC967292C2F8900A940F0 /* TargetView.swift */,
+			);
+			path = TargetView;
+			sourceTree = "<group>";
+		};
+		2D9EEFFC2929368800AE8505 = {
+			isa = PBXGroup;
+			children = (
+				2D9EF0072929368800AE8505 /* SwiftUI Gestures */,
+				2D9EF0062929368800AE8505 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D9EF0062929368800AE8505 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D9EF0052929368800AE8505 /* SwiftUI Gestures.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D9EF0072929368800AE8505 /* SwiftUI Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				2D9EF0082929368800AE8505 /* SwiftUI_GesturesApp.swift */,
+				2D61EE3D293A2A5E00CAF482 /* ShootingView */,
+				2D61EE3E293A2AE500CAF482 /* TargetView */,
+				2D5F4EF1292BA17900F36311 /* Views */,
+				2D61EE322931408000CAF482 /* View Models */,
+				2D61EE3829316D8800CAF482 /* Services */,
+				2D5F4EE9292B99C400F36311 /* Models */,
+				2D5F4EEC292B9CFC00F36311 /* Extensions */,
+				2D9EF00C2929368C00AE8505 /* Assets.xcassets */,
+				2D9EF00E2929368C00AE8505 /* Preview Content */,
+			);
+			path = "SwiftUI Gestures";
+			sourceTree = "<group>";
+		};
+		2D9EF00E2929368C00AE8505 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D9EF0042929368800AE8505 /* SwiftUI Gestures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D9EF0132929368C00AE8505 /* Build configuration list for PBXNativeTarget "SwiftUI Gestures" */;
+			buildPhases = (
+				2D9EF0012929368800AE8505 /* Sources */,
+				2D9EF0022929368800AE8505 /* Frameworks */,
+				2D9EF0032929368800AE8505 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftUI Gestures";
+			productName = "SwiftUI Gestures";
+			productReference = 2D9EF0052929368800AE8505 /* SwiftUI Gestures.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D9EEFFD2929368800AE8505 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					2D9EF0042929368800AE8505 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 2D9EF0002929368800AE8505 /* Build configuration list for PBXProject "SwiftUI Gestures" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D9EEFFC2929368800AE8505;
+			productRefGroup = 2D9EF0062929368800AE8505 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D9EF0042929368800AE8505 /* SwiftUI Gestures */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D9EF0032929368800AE8505 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D9EF0102929368C00AE8505 /* Preview Assets.xcassets in Resources */,
+				2D9EF00D2929368C00AE8505 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D9EF0012929368800AE8505 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2BC966292C2B0C00A940F0 /* WACenterMarkView.swift in Sources */,
+				2DAB0B922929680400C49D93 /* VisibilityViewExtension .swift in Sources */,
+				2DE31F69292E4C59007B7A19 /* CGPointExtension.swift in Sources */,
+				2D5F4EE8292B984600F36311 /* Hit+Round+ShootingSession.swift in Sources */,
+				2D5F4EEB292B99F000F36311 /* TargetScoreZone.swift in Sources */,
+				2D61EE34293140B800CAF482 /* ShootingViewModel.swift in Sources */,
+				2D5F4EEE292B9D2A00F36311 /* ColorExtension.swift in Sources */,
+				2D9EF00B2929368800AE8505 /* ShootingView.swift in Sources */,
+				2DDBD5E1293E3B5E0079DE2C /* MeasureSize.swift in Sources */,
+				2D9EF0092929368800AE8505 /* SwiftUI_GesturesApp.swift in Sources */,
+				2D61EE3C29316E2600CAF482 /* CoreDataViewModel.swift in Sources */,
+				2D61EE3729315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld in Sources */,
+				2D5F4EF0292BA16B00F36311 /* TargetFace.swift in Sources */,
+				2D61EE3A29316DAB00CAF482 /* CoreDataManager.swift in Sources */,
+				2D2BC968292C2F8900A940F0 /* TargetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2D9EF0112929368C00AE8505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D9EF0122929368C00AE8505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D9EF0142929368C00AE8505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Gestures/Preview Content\"";
+				DEVELOPMENT_TEAM = 46YHF3B432;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NSE.SwiftUI-Gestures";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2D9EF0152929368C00AE8505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Gestures/Preview Content\"";
+				DEVELOPMENT_TEAM = 46YHF3B432;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NSE.SwiftUI-Gestures";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D9EF0002929368800AE8505 /* Build configuration list for PBXProject "SwiftUI Gestures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D9EF0112929368C00AE8505 /* Debug */,
+				2D9EF0122929368C00AE8505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D9EF0132929368C00AE8505 /* Build configuration list for PBXNativeTarget "SwiftUI Gestures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D9EF0142929368C00AE8505 /* Debug */,
+				2D9EF0152929368C00AE8505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2D61EE3529315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2D61EE3629315F4300CAF482 /* LukisArcheryScorer.xcdatamodel */,
+			);
+			currentVersion = 2D61EE3629315F4300CAF482 /* LukisArcheryScorer.xcdatamodel */;
+			path = LukisArcheryScorer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2D9EEFFD2929368800AE8505 /* Project object */;
+}
