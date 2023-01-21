@@ -5,13 +5,6 @@
 //  Created by Sergey Nestroyniy on 21.11.2022.
 //
 
-enum CenterScoreStyle {
-    case withEleven
-    case withX
-    case onlyTen
-    case onlySmallTen
-}
-
 enum TargetColor {
     case yellowWA
     case redWA
@@ -227,7 +220,6 @@ enum TargetScoreZone: CaseIterable{
 }
 
 protocol TargetZoneProtocol {
-//    var fullDiameterMM : Double { get }
     var zoneDiameterMM : Double { get }
     var color: TargetColor { get }
     var borderColor: TargetColor { get }
@@ -235,16 +227,9 @@ protocol TargetZoneProtocol {
 }
 
 struct TargetZone : TargetZoneProtocol {
-//    var fullDiameterMM: Double
-    
-    var zoneDiameterMM: Double
-    
-    var color: TargetColor
-    
-    var borderColor: TargetColor
-    
-    var borderWidth: Double
-    
-    
+    let zoneDiameterMM: Double
+    let color: TargetColor
+    let borderColor: TargetColor
+    let borderWidth: Double
 }
 

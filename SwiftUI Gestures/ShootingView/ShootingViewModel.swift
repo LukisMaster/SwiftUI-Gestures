@@ -16,6 +16,7 @@ protocol ShootingViewModelProtocol {
     var scaleRatio: Double { get }
     var shotsMaxNumber : Int { get }
     var shotsPerTargetNumber : Int { get }
+    var seriesNumber: Int? { get }
     
     //property
     
@@ -47,7 +48,7 @@ protocol ShootingViewModelProtocol {
     func setGeometrySize(size: CGSize)
 }
 
-class ShootingViewModel : ShootingViewModelProtocol, ObservableObject  {
+final class ShootingViewModel : ShootingViewModelProtocol, ObservableObject  {
     
     var shots: [String] = []
     var isTargetSheetVisible: Bool
@@ -86,7 +87,8 @@ class ShootingViewModel : ShootingViewModelProtocol, ObservableObject  {
             targetIndex: nearTargetIndex,
             distanceToCenter: markToNearCenterDistance,
             arrowNumber: hits.count,
-            shootingNumberInSet: hits.count
+            shootingNumberInSet: hits.count,
+            seriesNumber: seriesNumber ?? nil
         ))
         shots.append(getHitScoreString(hit: hits.last!))
         markVisibility = .gone
@@ -99,6 +101,7 @@ class ShootingViewModel : ShootingViewModelProtocol, ObservableObject  {
     let scaleRatio: Double
     let shotsMaxNumber : Int
     let shotsPerTargetNumber : Int
+    let seriesNumber : Int?
     
     @Published var geometrySize : CGSize
     @Published var isAiming : Bool = false
@@ -116,7 +119,8 @@ class ShootingViewModel : ShootingViewModelProtocol, ObservableObject  {
         markOffsetY: -30,
         scaleRatio: 4,
         shotsMaxNumber: 6,
-        shotsPerTargetNumber: 2
+        shotsPerTargetNumber: 2,
+        seriesNumber: 2
     )
     
     // MARK: - public computed variables
@@ -219,7 +223,7 @@ class ShootingViewModel : ShootingViewModelProtocol, ObservableObject  {
     private var markScore : TargetScoreZone {
         var result = TargetScoreZone.miss
         for targetZone in targetFace.targetScoreZones {
-            if (targetZone.ratioToFullDiameter() * targetFace.fullDiameterMM.rawValue + arrowDiameterMM) / 2  >= markTargetCentersDistance[nearTargetIndex] {
+            if (targetZone.ratioToFullDiameter() * targetFace.fullDiameterMM.toDouble() + arrowDiameterMM) / 2  >= markTargetCentersDistance[nearTargetIndex] {
                 result = targetZone
             }
         }
@@ -261,7 +265,8 @@ class ShootingViewModel : ShootingViewModelProtocol, ObservableObject  {
         markOffsetY : Double,
         scaleRatio: Double,
         shotsMaxNumber : Int,
-        shotsPerTargetNumber : Int
+        shotsPerTargetNumber : Int,
+        seriesNumber : Int?
     ) {
         self.targetFace = targetFace
         self.arrowDiameterMM = arrowDiameterMM
@@ -269,16 +274,16 @@ class ShootingViewModel : ShootingViewModelProtocol, ObservableObject  {
         self.scaleRatio = scaleRatio
         self.shotsMaxNumber = shotsMaxNumber
         self.shotsPerTargetNumber = shotsPerTargetNumber
+        self.seriesNumber = seriesNumber
+
         
         self.isTargetSheetVisible = false
         self.markVisibility = .gone
         
-        self.targetFullDiameterMM = targetFace.fullDiameterMM.rawValue
+        self.targetFullDiameterMM = targetFace.fullDiameterMM.toDouble()
         
         self.geometrySize = CGSize.zero
     }
-    
-    
     
     
     // MARK: - Private func

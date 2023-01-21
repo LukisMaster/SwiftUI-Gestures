@@ -25,7 +25,8 @@ struct SwiftUI_GesturesApp: App {
                     markOffsetY: -30,
                     scaleRatio: 4,
                     shotsMaxNumber: 6,
-                    shotsPerTargetNumber: 2
+                    shotsPerTargetNumber: 2,
+                    seriesNumber: nil
                 )
             )
         }

@@ -99,7 +99,7 @@ struct TargetView: View {
     }
     
     private func getTargetZone (targetFace: TargetFaceWAProtocol, targetScoreZone: TargetScoreZone) -> TargetZone {
-        let diameter = targetFace.fullDiameterMM.rawValue * targetScoreZone.ratioToFullDiameter()
+        let diameter = targetFace.fullDiameterMM.toDouble() * targetScoreZone.ratioToFullDiameter()
         let color = targetScoreZone.toTargetColorWA()
         let borderColor = targetScoreZone.toBorderColorWA(zonesTenTo: targetFace.zonesTenTo)
         let borderWidth = targetScoreZone.toBorderWidthMM()

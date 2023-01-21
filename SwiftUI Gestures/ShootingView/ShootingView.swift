@@ -21,14 +21,14 @@ struct ShootingView: View {
             .onEnded { _ in
                 viewModel.aimingGestureEnded()
             }
-            
+        VStack {
             VStack {
                 Text("Hit index:")
                 ForEach(viewModel.hitIndexesAtNearTarget, id: \.self) { hitIndex in
                     Text("\(hitIndex) : \(viewModel.hits[hitIndex].distanceToCenter)")
                 }
             }
-        
+            
             HStack {
                 Text("Score:      ")
                 ForEach(0..<viewModel.shots.count, id: \.self) { index in
@@ -39,8 +39,8 @@ struct ShootingView: View {
             ZStack {
                 Color.clear
                     .measureGeometrySize(action: { geometrySize in
-                    viewModel.setGeometrySize(size: geometrySize)
-                })
+                        viewModel.setGeometrySize(size: geometrySize)
+                    })
                 
                 
                 TargetView(
@@ -52,7 +52,7 @@ struct ShootingView: View {
                 .scaleEffect(viewModel.isAiming ? viewModel.aimingScale : 1,
                              anchor: viewModel.markPoint
                 )
-
+                
                 
                 ZStack {
                     Circle()
@@ -65,12 +65,14 @@ struct ShootingView: View {
                 .position(viewModel.markPosition)
                 
             }
-
+            
             .onAppear {
                 viewModel.shootingFieldOnAppear()
             }
-
+            
             .gesture(aimingDragGesture)
+        }
+
     }
 }
 
@@ -91,7 +93,8 @@ struct ContentView_Previews: PreviewProvider {
                 markOffsetY: -30,
                 scaleRatio: 4,
                 shotsMaxNumber: 6,
-                shotsPerTargetNumber: 2
+                shotsPerTargetNumber: 2,
+                seriesNumber: nil
             )
         )
         .previewLayout(.device)

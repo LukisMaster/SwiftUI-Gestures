@@ -1,17 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Shot" representedClassName="Shot" syncable="YES" codeGenerationType="class">
-        <attribute name="arrowNumber" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    <entity name="ArrowsEntity" representedClassName="ArrowsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="diameterMM" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="shootingSession" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShootingSessionEntity" inverseName="arrows" inverseEntity="ShootingSessionEntity"/>
+    </entity>
+    <entity name="BowEntity" representedClassName="BowEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="shootingSession" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShootingSessionEntity" inverseName="bow" inverseEntity="ShootingSessionEntity"/>
+    </entity>
+    <entity name="HitEntity" representedClassName="HitEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="arrowNumber" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="distanceToCenter" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="isAtTarget" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isSmallTen" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="positionX" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="positionY" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="score" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="shootingNumberInSet" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="targetIndex" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="score" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shootingNumberInSet" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="targetIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="round" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoundEntity" inverseName="hits" inverseEntity="RoundEntity"/>
+    </entity>
+    <entity name="LocationEntity" representedClassName="LocationEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="adress" optional="YES" attributeType="String"/>
+        <attribute name="indoor" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="shootingSessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShootingSessionEntity" inverseName="location" inverseEntity="ShootingSessionEntity"/>
+    </entity>
+    <entity name="RoundEntity" representedClassName="RoundEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="centerCrosshairSize" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="centerScoreStyle" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fullDiameterMM" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="maxHitsNumberInSeries" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="maxHitsNumberInTarget" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="maxSeriesNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="scheme" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="spacing" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="zonesTenTo" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="hits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HitEntity" inverseName="round" inverseEntity="HitEntity"/>
+        <relationship name="shootingSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShootingSessionEntity" inverseName="rounds" inverseEntity="ShootingSessionEntity"/>
+    </entity>
+    <entity name="ShootingSessionEntity" representedClassName="ShootingSessionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="cloudiness" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateFirst" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateLast" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="windSpeed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="arrows" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArrowsEntity" inverseName="shootingSession" inverseEntity="ArrowsEntity"/>
+        <relationship name="bow" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BowEntity" inverseName="shootingSession" inverseEntity="BowEntity"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationEntity" inverseName="shootingSessions" inverseEntity="LocationEntity"/>
+        <relationship name="rounds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RoundEntity" inverseName="shootingSession" inverseEntity="RoundEntity"/>
     </entity>
     <elements>
-        <element name="Shot" positionX="-63" positionY="-18" width="128" height="164"/>
+        <element name="HitEntity" positionX="-382.3125" positionY="-145.1328125" width="128" height="193"/>
+        <element name="RoundEntity" positionX="84.1796875" positionY="-115.15625" width="128" height="208"/>
+        <element name="ShootingSessionEntity" positionX="-179.92578125" positionY="-159.18359375" width="128" height="208"/>
+        <element name="LocationEntity" positionX="-153" positionY="-36" width="128" height="119"/>
+        <element name="ArrowsEntity" positionX="-144" positionY="-9" width="128" height="89"/>
+        <element name="BowEntity" positionX="-135" positionY="0" width="128" height="74"/>
     </elements>
 </model>

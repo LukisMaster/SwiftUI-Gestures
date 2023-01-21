@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum TypeOfShootingSession {
-    case freePractice
-    case standardTraining
+enum TypeOfShootingSession : Int16 {
+    case freePractice = 0
+    case standardTraining = 1
 }
 
 struct Hit {
@@ -22,12 +22,13 @@ struct Hit {
     let distanceToCenter : Double
     let arrowNumber : Int
     let shootingNumberInSet : Int
+    let seriesNumber : Int?
 }
 
 struct Round {
     var series : [[Hit]]
-    var seriesCount : Int?
-    var targetFace : TargetFaceWA
+    var targetFace : TargetFaceWAProtocol
+    var roundRules : RoundRulesProtocol
 }
 
 struct ShootingSession {
