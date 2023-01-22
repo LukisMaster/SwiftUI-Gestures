@@ -1,6 +1,6 @@
 //
 //  measureSize.swift
-//  SwiftUI Gestures
+//  MyArcheryTargetsScorer
 //
 //  Created by Sergey Nestroyniy on 05.12.2022.
 //

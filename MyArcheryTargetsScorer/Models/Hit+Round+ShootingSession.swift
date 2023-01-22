@@ -1,6 +1,6 @@
 //
 //  Hit.swift
-//  SwiftUI Gestures
+//  MyArcheryTargetsScorer
 //
 //  Created by Sergey Nestroyniy on 21.11.2022.
 //

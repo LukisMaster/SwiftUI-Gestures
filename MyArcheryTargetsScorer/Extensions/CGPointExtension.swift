@@ -1,6 +1,6 @@
 //
 //  CGPointExtension.swift
-//  SwiftUI Gestures
+//  MyArcheryTargetsScorer
 //
 //  Created by Sergey Nestroyniy on 23.11.2022.
 //

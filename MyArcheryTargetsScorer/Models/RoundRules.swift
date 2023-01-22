@@ -1,6 +1,6 @@
 //
 //  RoundRules.swift
-//  SwiftUI Gestures
+//  MyArcheryTargetsScorer
 //
 //  Created by Sergey Nestroyniy on 21.01.2023.
 //

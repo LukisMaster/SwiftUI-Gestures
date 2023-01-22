@@ -1,14 +1,11 @@
-//
-//  SwiftUI_GesturesApp.swift
-//  SwiftUI Gestures
-//
+
 //  Created by Sergey Nestroyniy on 19.11.2022.
 //
 
 import SwiftUI
 
 @main
-struct SwiftUI_GesturesApp: App {
+struct MyArcheryTargetsScorerApp: App {
     var body: some Scene {
         WindowGroup {
             ShootingView(

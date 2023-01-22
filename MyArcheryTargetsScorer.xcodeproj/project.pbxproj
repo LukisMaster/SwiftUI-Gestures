@@ -14,8 +14,7 @@
 		2D5F4EEE292B9D2A00F36311 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F4EED292B9D2A00F36311 /* ColorExtension.swift */; };
 		2D5F4EF0292BA16B00F36311 /* TargetFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F4EEF292BA16B00F36311 /* TargetFace.swift */; };
 		2D61EE34293140B800CAF482 /* ShootingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE33293140B800CAF482 /* ShootingViewModel.swift */; };
-		2D61EE3729315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE3529315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld */; };
-		2D9EF0092929368800AE8505 /* SwiftUI_GesturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EF0082929368800AE8505 /* SwiftUI_GesturesApp.swift */; };
+		2D9EF0092929368800AE8505 /* MyArcheryTargetsScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EF0082929368800AE8505 /* MyArcheryTargetsScorer.swift */; };
 		2D9EF00B2929368800AE8505 /* ShootingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EF00A2929368800AE8505 /* ShootingView.swift */; };
 		2D9EF00D2929368C00AE8505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9EF00C2929368C00AE8505 /* Assets.xcassets */; };
 		2D9EF0102929368C00AE8505 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */; };
@@ -25,6 +24,7 @@
 		2DECB1BD297A04AA00B1C7D1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1BC297A04AA00B1C7D1 /* CoreDataManager.swift */; };
 		2DECB1BF297ABED600B1C7D1 /* TemplateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1BE297ABED600B1C7D1 /* TemplateViewModel.swift */; };
 		2DECB1C1297C61CD00B1C7D1 /* RoundRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1C0297C61CD00B1C7D1 /* RoundRules.swift */; };
+		2DECB1C2297DF0AB00B1C7D1 /* LukisArcheryScorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE3529315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		2D5F4EEF292BA16B00F36311 /* TargetFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetFace.swift; sourceTree = "<group>"; };
 		2D61EE33293140B800CAF482 /* ShootingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingViewModel.swift; sourceTree = "<group>"; };
 		2D61EE3629315F4300CAF482 /* LukisArcheryScorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LukisArcheryScorer.xcdatamodel; sourceTree = "<group>"; };
-		2D9EF0052929368800AE8505 /* SwiftUI Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Gestures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D9EF0082929368800AE8505 /* SwiftUI_GesturesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_GesturesApp.swift; sourceTree = "<group>"; };
+		2D9EF0052929368800AE8505 /* MyArcheryTargetsScorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyArcheryTargetsScorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D9EF0082929368800AE8505 /* MyArcheryTargetsScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArcheryTargetsScorer.swift; sourceTree = "<group>"; };
 		2D9EF00A2929368800AE8505 /* ShootingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingView.swift; sourceTree = "<group>"; };
 		2D9EF00C2929368C00AE8505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		2D9EEFFC2929368800AE8505 = {
 			isa = PBXGroup;
 			children = (
-				2D9EF0072929368800AE8505 /* SwiftUI Gestures */,
+				2D9EF0072929368800AE8505 /* MyArcheryTargetsScorer */,
 				2D9EF0062929368800AE8505 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,15 +135,15 @@
 		2D9EF0062929368800AE8505 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D9EF0052929368800AE8505 /* SwiftUI Gestures.app */,
+				2D9EF0052929368800AE8505 /* MyArcheryTargetsScorer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2D9EF0072929368800AE8505 /* SwiftUI Gestures */ = {
+		2D9EF0072929368800AE8505 /* MyArcheryTargetsScorer */ = {
 			isa = PBXGroup;
 			children = (
-				2D9EF0082929368800AE8505 /* SwiftUI_GesturesApp.swift */,
+				2D9EF0082929368800AE8505 /* MyArcheryTargetsScorer.swift */,
 				2D61EE3D293A2A5E00CAF482 /* ShootingView */,
 				2D61EE3E293A2AE500CAF482 /* TargetView */,
 				2D5F4EF1292BA17900F36311 /* Views */,
@@ -154,7 +154,7 @@
 				2D9EF00C2929368C00AE8505 /* Assets.xcassets */,
 				2D9EF00E2929368C00AE8505 /* Preview Content */,
 			);
-			path = "SwiftUI Gestures";
+			path = MyArcheryTargetsScorer;
 			sourceTree = "<group>";
 		};
 		2D9EF00E2929368C00AE8505 /* Preview Content */ = {
@@ -168,9 +168,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2D9EF0042929368800AE8505 /* SwiftUI Gestures */ = {
+		2D9EF0042929368800AE8505 /* MyArcheryTargetsScorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D9EF0132929368C00AE8505 /* Build configuration list for PBXNativeTarget "SwiftUI Gestures" */;
+			buildConfigurationList = 2D9EF0132929368C00AE8505 /* Build configuration list for PBXNativeTarget "MyArcheryTargetsScorer" */;
 			buildPhases = (
 				2D9EF0012929368800AE8505 /* Sources */,
 				2D9EF0022929368800AE8505 /* Frameworks */,
@@ -180,9 +180,9 @@
 			);
 			dependencies = (
 			);
-			name = "SwiftUI Gestures";
+			name = MyArcheryTargetsScorer;
 			productName = "SwiftUI Gestures";
-			productReference = 2D9EF0052929368800AE8505 /* SwiftUI Gestures.app */;
+			productReference = 2D9EF0052929368800AE8505 /* MyArcheryTargetsScorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D9EF0002929368800AE8505 /* Build configuration list for PBXProject "SwiftUI Gestures" */;
+			buildConfigurationList = 2D9EF0002929368800AE8505 /* Build configuration list for PBXProject "MyArcheryTargetsScorer" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -213,7 +213,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2D9EF0042929368800AE8505 /* SwiftUI Gestures */,
+				2D9EF0042929368800AE8505 /* MyArcheryTargetsScorer */,
 			);
 		};
 /* End PBXProject section */
@@ -246,8 +246,8 @@
 				2D9EF00B2929368800AE8505 /* ShootingView.swift in Sources */,
 				2DDBD5E1293E3B5E0079DE2C /* MeasureSize.swift in Sources */,
 				2DECB1BF297ABED600B1C7D1 /* TemplateViewModel.swift in Sources */,
-				2D9EF0092929368800AE8505 /* SwiftUI_GesturesApp.swift in Sources */,
-				2D61EE3729315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld in Sources */,
+				2DECB1C2297DF0AB00B1C7D1 /* LukisArcheryScorer.xcdatamodeld in Sources */,
+				2D9EF0092929368800AE8505 /* MyArcheryTargetsScorer.swift in Sources */,
 				2D5F4EF0292BA16B00F36311 /* TargetFace.swift in Sources */,
 				2DECB1C1297C61CD00B1C7D1 /* RoundRules.swift in Sources */,
 				2D2BC968292C2F8900A940F0 /* TargetView.swift in Sources */,
@@ -378,7 +378,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Gestures/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyArcheryTargetsScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 46YHF3B432;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -393,8 +393,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "NSE.SwiftUI-Gestures";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = NSE.MyArcheryTargetsScorer;
+				PRODUCT_NAME = MyArcheryTargetsScorer;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -408,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Gestures/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyArcheryTargetsScorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 46YHF3B432;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -423,8 +423,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "NSE.SwiftUI-Gestures";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = NSE.MyArcheryTargetsScorer;
+				PRODUCT_NAME = MyArcheryTargetsScorer;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -434,7 +434,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D9EF0002929368800AE8505 /* Build configuration list for PBXProject "SwiftUI Gestures" */ = {
+		2D9EF0002929368800AE8505 /* Build configuration list for PBXProject "MyArcheryTargetsScorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D9EF0112929368C00AE8505 /* Debug */,
@@ -443,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D9EF0132929368C00AE8505 /* Build configuration list for PBXNativeTarget "SwiftUI Gestures" */ = {
+		2D9EF0132929368C00AE8505 /* Build configuration list for PBXNativeTarget "MyArcheryTargetsScorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D9EF0142929368C00AE8505 /* Debug */,

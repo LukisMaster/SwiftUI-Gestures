@@ -1,6 +1,6 @@
 //
 //  CoreDataManager.swift
-//  SwiftUI Gestures
+//  MyArcheryTargetsScorer
 //
 //  Created by Sergey Nestroyniy on 20.01.2023.
 //

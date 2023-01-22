@@ -1,6 +1,6 @@
 //
 //  WACenterMarkView.swift
-//  SwiftUI Gestures
+//  MyArcheryTargetsScorer
 //
 //  Created by Sergey Nestroyniy on 22.11.2022.
 //
