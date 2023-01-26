@@ -1,4 +1,7 @@
-
+//
+//  MyArcheryTargetsScorer.swift
+//  MyArcheryTargetsScorer
+//
 //  Created by Sergey Nestroyniy on 19.11.2022.
 //
 

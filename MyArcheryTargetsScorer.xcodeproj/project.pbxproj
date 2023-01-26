@@ -25,6 +25,9 @@
 		2DECB1BF297ABED600B1C7D1 /* TemplateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1BE297ABED600B1C7D1 /* TemplateViewModel.swift */; };
 		2DECB1C1297C61CD00B1C7D1 /* RoundRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1C0297C61CD00B1C7D1 /* RoundRules.swift */; };
 		2DECB1C2297DF0AB00B1C7D1 /* LukisArcheryScorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE3529315F4300CAF482 /* LukisArcheryScorer.xcdatamodeld */; };
+		2DECB1C4297DF46600B1C7D1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1C3297DF46600B1C7D1 /* HomeView.swift */; };
+		2DECB1C72980156500B1C7D1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1C62980156500B1C7D1 /* HomeViewModel.swift */; };
+		2DECB1C9298015FD00B1C7D1 /* SessionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1C8298015FD00B1C7D1 /* SessionSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		2DECB1BC297A04AA00B1C7D1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = ../../CoreDataManager.swift; sourceTree = "<group>"; };
 		2DECB1BE297ABED600B1C7D1 /* TemplateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewModel.swift; sourceTree = "<group>"; };
 		2DECB1C0297C61CD00B1C7D1 /* RoundRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRules.swift; sourceTree = "<group>"; };
+		2DECB1C3297DF46600B1C7D1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2DECB1C62980156500B1C7D1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2DECB1C8298015FD00B1C7D1 /* SessionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				2D9EF0082929368800AE8505 /* MyArcheryTargetsScorer.swift */,
+				2DECB1C8298015FD00B1C7D1 /* SessionSettingsView.swift */,
+				2DECB1C52980154400B1C7D1 /* HomeView */,
 				2D61EE3D293A2A5E00CAF482 /* ShootingView */,
 				2D61EE3E293A2AE500CAF482 /* TargetView */,
 				2D5F4EF1292BA17900F36311 /* Views */,
@@ -163,6 +171,15 @@
 				2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2DECB1C52980154400B1C7D1 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				2DECB1C3297DF46600B1C7D1 /* HomeView.swift */,
+				2DECB1C62980156500B1C7D1 /* HomeViewModel.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2BC966292C2B0C00A940F0 /* WACenterMarkView.swift in Sources */,
+				2DECB1C72980156500B1C7D1 /* HomeViewModel.swift in Sources */,
 				2DAB0B922929680400C49D93 /* VisibilityViewExtension .swift in Sources */,
 				2DE31F69292E4C59007B7A19 /* CGPointExtension.swift in Sources */,
 				2DECB1BD297A04AA00B1C7D1 /* CoreDataManager.swift in Sources */,
@@ -243,9 +261,11 @@
 				2D5F4EEB292B99F000F36311 /* TargetScoreZone.swift in Sources */,
 				2D61EE34293140B800CAF482 /* ShootingViewModel.swift in Sources */,
 				2D5F4EEE292B9D2A00F36311 /* ColorExtension.swift in Sources */,
+				2DECB1C9298015FD00B1C7D1 /* SessionSettingsView.swift in Sources */,
 				2D9EF00B2929368800AE8505 /* ShootingView.swift in Sources */,
 				2DDBD5E1293E3B5E0079DE2C /* MeasureSize.swift in Sources */,
 				2DECB1BF297ABED600B1C7D1 /* TemplateViewModel.swift in Sources */,
+				2DECB1C4297DF46600B1C7D1 /* HomeView.swift in Sources */,
 				2DECB1C2297DF0AB00B1C7D1 /* LukisArcheryScorer.xcdatamodeld in Sources */,
 				2D9EF0092929368800AE8505 /* MyArcheryTargetsScorer.swift in Sources */,
 				2D5F4EF0292BA16B00F36311 /* TargetFace.swift in Sources */,
