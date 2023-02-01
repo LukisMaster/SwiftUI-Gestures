@@ -26,21 +26,20 @@ struct TargetView: View {
                             .foregroundColor( colorOfTargetZone(targetZone.color))
                             .overlay(
                                 Circle()
-                                    .strokeBorder(lineWidth: targetZone.borderWidth)
+                                    .strokeBorder(lineWidth: targetZone.borderWidth * scaleToDisplay)
                                     .foregroundColor( colorOfTargetZone(targetZone.borderColor))
                             )
                             .frame(
-                                width: targetZone.zoneDiameterMM,
-                                height: targetZone.zoneDiameterMM
+                                width: targetZone.zoneDiameterMM * scaleToDisplay,
+                                height: targetZone.zoneDiameterMM * scaleToDisplay
                             )
-                        WACenterMarkView(size: targetFace.centerCrosshairSize)
+                        WACenterMarkView(size: targetFace.centerCrosshairSize * scaleToDisplay)
                         
                     }
                     .padding(getTargetPadding(
                         targetIndex: targetIndex,
                         targetFace: targetFace
                     ))
-                    .scaleEffect(scaleToDisplay)
                     
                 }
             }
@@ -51,7 +50,7 @@ struct TargetView: View {
     
     
     private func getTargetPadding (targetIndex: Int, targetFace: TargetFaceWAProtocol) -> EdgeInsets {
-        let targetCentersDistance = targetFace.centersDistance
+        let targetCentersDistance = targetFace.centersDistance * scaleToDisplay
         let triangleHeight = targetCentersDistance * sqrt(3) / 2
 
         var top = Double.zero

@@ -14,11 +14,23 @@
 		2D5F4EEE292B9D2A00F36311 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F4EED292B9D2A00F36311 /* ColorExtension.swift */; };
 		2D5F4EF0292BA16B00F36311 /* TargetFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F4EEF292BA16B00F36311 /* TargetFace.swift */; };
 		2D61EE34293140B800CAF482 /* ShootingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61EE33293140B800CAF482 /* ShootingViewModel.swift */; };
+		2D68551C29855E4100A76FBB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D68551B29855E4100A76FBB /* Task.swift */; };
+		2D68551E29856C9100A76FBB /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D68551D29856C9100A76FBB /* IntroView.swift */; };
+		2D8FD74A2985A2D300E30E33 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8FD7492985A2D300E30E33 /* UserProfile.swift */; };
 		2D9EF0092929368800AE8505 /* MyArcheryTargetsScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EF0082929368800AE8505 /* MyArcheryTargetsScorer.swift */; };
 		2D9EF00B2929368800AE8505 /* ShootingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EF00A2929368800AE8505 /* ShootingView.swift */; };
 		2D9EF00D2929368C00AE8505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9EF00C2929368C00AE8505 /* Assets.xcassets */; };
 		2D9EF0102929368C00AE8505 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */; };
 		2DAB0B922929680400C49D93 /* VisibilityViewExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB0B912929680400C49D93 /* VisibilityViewExtension .swift */; };
+		2DB2FCE6298A8BE60088AD11 /* SessionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCE5298A8BE60088AD11 /* SessionRowView.swift */; };
+		2DB2FCE8298B104B0088AD11 /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCE7298B104B0088AD11 /* CustomNavBarView.swift */; };
+		2DB2FCEB298B16870088AD11 /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCEA298B16870088AD11 /* CustomNavBarContainerView.swift */; };
+		2DB2FCED298B1B9E0088AD11 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCEC298B1B9E0088AD11 /* CustomNavView.swift */; };
+		2DB2FCEF298B1D1F0088AD11 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCEE298B1D1F0088AD11 /* CustomNavLink.swift */; };
+		2DB2FCF1298B215F0088AD11 /* CustomNavBarPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCF0298B215F0088AD11 /* CustomNavBarPreferenceKeys.swift */; };
+		2DCB1E65298414B60043D5C5 /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB1E64298414B60043D5C5 /* AppSettingsView.swift */; };
+		2DCB1E67298414D50043D5C5 /* AppSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB1E66298414D50043D5C5 /* AppSettingsViewModel.swift */; };
+		2DCB1E6A298428D60043D5C5 /* ArcheryEquipmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB1E69298428D60043D5C5 /* ArcheryEquipmentsView.swift */; };
 		2DDBD5E1293E3B5E0079DE2C /* MeasureSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBD5E0293E3B5E0079DE2C /* MeasureSize.swift */; };
 		2DE31F69292E4C59007B7A19 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE31F68292E4C59007B7A19 /* CGPointExtension.swift */; };
 		2DECB1BD297A04AA00B1C7D1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DECB1BC297A04AA00B1C7D1 /* CoreDataManager.swift */; };
@@ -39,12 +51,24 @@
 		2D5F4EEF292BA16B00F36311 /* TargetFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetFace.swift; sourceTree = "<group>"; };
 		2D61EE33293140B800CAF482 /* ShootingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingViewModel.swift; sourceTree = "<group>"; };
 		2D61EE3629315F4300CAF482 /* LukisArcheryScorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LukisArcheryScorer.xcdatamodel; sourceTree = "<group>"; };
+		2D68551B29855E4100A76FBB /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2D68551D29856C9100A76FBB /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		2D8FD7492985A2D300E30E33 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		2D9EF0052929368800AE8505 /* MyArcheryTargetsScorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyArcheryTargetsScorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9EF0082929368800AE8505 /* MyArcheryTargetsScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArcheryTargetsScorer.swift; sourceTree = "<group>"; };
 		2D9EF00A2929368800AE8505 /* ShootingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingView.swift; sourceTree = "<group>"; };
 		2D9EF00C2929368C00AE8505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DAB0B912929680400C49D93 /* VisibilityViewExtension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisibilityViewExtension .swift"; sourceTree = "<group>"; };
+		2DB2FCE5298A8BE60088AD11 /* SessionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRowView.swift; sourceTree = "<group>"; };
+		2DB2FCE7298B104B0088AD11 /* CustomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
+		2DB2FCEA298B16870088AD11 /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
+		2DB2FCEC298B1B9E0088AD11 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		2DB2FCEE298B1D1F0088AD11 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
+		2DB2FCF0298B215F0088AD11 /* CustomNavBarPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKeys.swift; sourceTree = "<group>"; };
+		2DCB1E64298414B60043D5C5 /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
+		2DCB1E66298414D50043D5C5 /* AppSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewModel.swift; sourceTree = "<group>"; };
+		2DCB1E69298428D60043D5C5 /* ArcheryEquipmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcheryEquipmentsView.swift; sourceTree = "<group>"; };
 		2DDBD5E0293E3B5E0079DE2C /* MeasureSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureSize.swift; sourceTree = "<group>"; };
 		2DE31F68292E4C59007B7A19 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		2DECB1BC297A04AA00B1C7D1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = ../../CoreDataManager.swift; sourceTree = "<group>"; };
@@ -74,6 +98,7 @@
 				2D5F4EEA292B99F000F36311 /* TargetScoreZone.swift */,
 				2D5F4EEF292BA16B00F36311 /* TargetFace.swift */,
 				2DECB1C0297C61CD00B1C7D1 /* RoundRules.swift */,
+				2D8FD7492985A2D300E30E33 /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,7 +116,10 @@
 		2D5F4EF1292BA17900F36311 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D61EE3E293A2AE500CAF482 /* TargetView */,
 				2DDBD5E0293E3B5E0079DE2C /* MeasureSize.swift */,
+				2DB2FCE5298A8BE60088AD11 /* SessionRowView.swift */,
+				2DB2FCE9298B16670088AD11 /* CustomNavBarView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,7 +127,6 @@
 		2D61EE322931408000CAF482 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				2DECB1BE297ABED600B1C7D1 /* TemplateViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -124,8 +151,8 @@
 		2D61EE3E293A2AE500CAF482 /* TargetView */ = {
 			isa = PBXGroup;
 			children = (
-				2D2BC965292C2B0C00A940F0 /* WACenterMarkView.swift */,
 				2D2BC967292C2F8900A940F0 /* TargetView.swift */,
+				2D2BC965292C2B0C00A940F0 /* WACenterMarkView.swift */,
 			);
 			path = TargetView;
 			sourceTree = "<group>";
@@ -150,10 +177,14 @@
 			isa = PBXGroup;
 			children = (
 				2D9EF0082929368800AE8505 /* MyArcheryTargetsScorer.swift */,
-				2DECB1C8298015FD00B1C7D1 /* SessionSettingsView.swift */,
+				2D68551D29856C9100A76FBB /* IntroView.swift */,
+				2D68551B29855E4100A76FBB /* Task.swift */,
+				2DECB1BE297ABED600B1C7D1 /* TemplateViewModel.swift */,
+				2DCB1E632984148D0043D5C5 /* AppSettingsView */,
+				2DCB1E6B298428DE0043D5C5 /* ArcheryEquipmentsView */,
+				2DCB1E68298427FE0043D5C5 /* SessionSettingsView */,
 				2DECB1C52980154400B1C7D1 /* HomeView */,
 				2D61EE3D293A2A5E00CAF482 /* ShootingView */,
-				2D61EE3E293A2AE500CAF482 /* TargetView */,
 				2D5F4EF1292BA17900F36311 /* Views */,
 				2D61EE322931408000CAF482 /* View Models */,
 				2D61EE3829316D8800CAF482 /* Services */,
@@ -171,6 +202,43 @@
 				2D9EF00F2929368C00AE8505 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2DB2FCE9298B16670088AD11 /* CustomNavBarView */ = {
+			isa = PBXGroup;
+			children = (
+				2DB2FCEC298B1B9E0088AD11 /* CustomNavView.swift */,
+				2DB2FCEA298B16870088AD11 /* CustomNavBarContainerView.swift */,
+				2DB2FCE7298B104B0088AD11 /* CustomNavBarView.swift */,
+				2DB2FCEE298B1D1F0088AD11 /* CustomNavLink.swift */,
+				2DB2FCF0298B215F0088AD11 /* CustomNavBarPreferenceKeys.swift */,
+			);
+			path = CustomNavBarView;
+			sourceTree = "<group>";
+		};
+		2DCB1E632984148D0043D5C5 /* AppSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				2DCB1E64298414B60043D5C5 /* AppSettingsView.swift */,
+				2DCB1E66298414D50043D5C5 /* AppSettingsViewModel.swift */,
+			);
+			path = AppSettingsView;
+			sourceTree = "<group>";
+		};
+		2DCB1E68298427FE0043D5C5 /* SessionSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				2DECB1C8298015FD00B1C7D1 /* SessionSettingsView.swift */,
+			);
+			path = SessionSettingsView;
+			sourceTree = "<group>";
+		};
+		2DCB1E6B298428DE0043D5C5 /* ArcheryEquipmentsView */ = {
+			isa = PBXGroup;
+			children = (
+				2DCB1E69298428D60043D5C5 /* ArcheryEquipmentsView.swift */,
+			);
+			path = ArcheryEquipmentsView;
 			sourceTree = "<group>";
 		};
 		2DECB1C52980154400B1C7D1 /* HomeView */ = {
@@ -256,20 +324,32 @@
 				2DECB1C72980156500B1C7D1 /* HomeViewModel.swift in Sources */,
 				2DAB0B922929680400C49D93 /* VisibilityViewExtension .swift in Sources */,
 				2DE31F69292E4C59007B7A19 /* CGPointExtension.swift in Sources */,
+				2DB2FCEF298B1D1F0088AD11 /* CustomNavLink.swift in Sources */,
+				2D68551C29855E4100A76FBB /* Task.swift in Sources */,
 				2DECB1BD297A04AA00B1C7D1 /* CoreDataManager.swift in Sources */,
 				2D5F4EE8292B984600F36311 /* Hit+Round+ShootingSession.swift in Sources */,
 				2D5F4EEB292B99F000F36311 /* TargetScoreZone.swift in Sources */,
+				2DB2FCED298B1B9E0088AD11 /* CustomNavView.swift in Sources */,
 				2D61EE34293140B800CAF482 /* ShootingViewModel.swift in Sources */,
 				2D5F4EEE292B9D2A00F36311 /* ColorExtension.swift in Sources */,
 				2DECB1C9298015FD00B1C7D1 /* SessionSettingsView.swift in Sources */,
 				2D9EF00B2929368800AE8505 /* ShootingView.swift in Sources */,
+				2DB2FCE8298B104B0088AD11 /* CustomNavBarView.swift in Sources */,
 				2DDBD5E1293E3B5E0079DE2C /* MeasureSize.swift in Sources */,
 				2DECB1BF297ABED600B1C7D1 /* TemplateViewModel.swift in Sources */,
+				2DB2FCE6298A8BE60088AD11 /* SessionRowView.swift in Sources */,
+				2DCB1E67298414D50043D5C5 /* AppSettingsViewModel.swift in Sources */,
+				2DB2FCEB298B16870088AD11 /* CustomNavBarContainerView.swift in Sources */,
+				2DCB1E65298414B60043D5C5 /* AppSettingsView.swift in Sources */,
 				2DECB1C4297DF46600B1C7D1 /* HomeView.swift in Sources */,
+				2D68551E29856C9100A76FBB /* IntroView.swift in Sources */,
 				2DECB1C2297DF0AB00B1C7D1 /* LukisArcheryScorer.xcdatamodeld in Sources */,
 				2D9EF0092929368800AE8505 /* MyArcheryTargetsScorer.swift in Sources */,
+				2DCB1E6A298428D60043D5C5 /* ArcheryEquipmentsView.swift in Sources */,
 				2D5F4EF0292BA16B00F36311 /* TargetFace.swift in Sources */,
+				2D8FD74A2985A2D300E30E33 /* UserProfile.swift in Sources */,
 				2DECB1C1297C61CD00B1C7D1 /* RoundRules.swift in Sources */,
+				2DB2FCF1298B215F0088AD11 /* CustomNavBarPreferenceKeys.swift in Sources */,
 				2D2BC968292C2F8900A940F0 /* TargetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

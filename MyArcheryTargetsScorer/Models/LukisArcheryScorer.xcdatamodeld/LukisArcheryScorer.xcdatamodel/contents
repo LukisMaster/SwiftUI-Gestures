@@ -57,12 +57,19 @@
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationEntity" inverseName="shootingSessions" inverseEntity="LocationEntity"/>
         <relationship name="rounds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RoundEntity" inverseName="shootingSession" inverseEntity="RoundEntity"/>
     </entity>
+    <entity name="UserProfileEntity" representedClassName="UserProfileEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="club" optional="YES" attributeType="String"/>
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
-        <element name="HitEntity" positionX="-382.3125" positionY="-145.1328125" width="128" height="193"/>
-        <element name="RoundEntity" positionX="84.1796875" positionY="-115.15625" width="128" height="208"/>
-        <element name="ShootingSessionEntity" positionX="-179.92578125" positionY="-159.18359375" width="128" height="208"/>
-        <element name="LocationEntity" positionX="-153" positionY="-36" width="128" height="119"/>
         <element name="ArrowsEntity" positionX="-144" positionY="-9" width="128" height="89"/>
         <element name="BowEntity" positionX="-135" positionY="0" width="128" height="74"/>
+        <element name="HitEntity" positionX="-382.3125" positionY="-145.1328125" width="128" height="193"/>
+        <element name="LocationEntity" positionX="-153" positionY="-36" width="128" height="119"/>
+        <element name="RoundEntity" positionX="84.1796875" positionY="-115.15625" width="128" height="208"/>
+        <element name="ShootingSessionEntity" positionX="-179.92578125" positionY="-159.18359375" width="128" height="208"/>
+        <element name="UserProfileEntity" positionX="-180" positionY="-45" width="128" height="89"/>
     </elements>
 </model>

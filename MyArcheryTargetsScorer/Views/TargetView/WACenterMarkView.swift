@@ -33,5 +33,6 @@ struct WACenterMarkView: View {
 struct WACenterMarkView_Previews: PreviewProvider {
     static var previews: some View {
         WACenterMarkView(size: 4)
+            .previewLayout(.sizeThatFits)
     }
 }

@@ -9,26 +9,19 @@ import SwiftUI
 
 @main
 struct MyArcheryTargetsScorerApp: App {
+    @StateObject var viewModel = HomeViewModel()
+    
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.clear
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ShootingView(
-                viewModel: ShootingViewModel(
-                    targetFace: TargetFaceWA(
-                        fullDiameterMM: .d400,
-                        zonesTenTo: 6,
-                        centerScoreStyle: .withX,
-                        centerCrosshairSize: 4,
-                        scheme: .vertical,
-                        spacing: 20
-                    ),
-                    arrowDiameterMM: 9.3,
-                    markOffsetY: -30,
-                    scaleRatio: 4,
-                    shotsMaxNumber: 6,
-                    shotsPerTargetNumber: 2,
-                    seriesNumber: nil
-                )
-            )
+            CustomNavView {
+                HomeView()
+                    .environmentObject(viewModel)
+                    .customNavBarItems(title: "My Archery Target Scorer", subtitle: nil, backButtonHidden: true)
+            }
         }
     }
 }

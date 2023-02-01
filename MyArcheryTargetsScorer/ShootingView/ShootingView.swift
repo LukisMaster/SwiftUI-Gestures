@@ -57,7 +57,7 @@ struct ShootingView: View {
                 ZStack {
                     Circle()
                         .frame(width: viewModel.markCircleSize, height: viewModel.markCircleSize)
-                        .foregroundColor(.markerColor)
+                        .foregroundColor(Color.appTheme.markerColor)
                     Text(viewModel.markScoreText)
                         .font(.system(size: viewModel.markScoreFontSize))
                 }
@@ -83,7 +83,7 @@ struct ContentView_Previews: PreviewProvider {
             viewModel: ShootingViewModel(
                 targetFace: TargetFaceWA(
                     fullDiameterMM: .d400,
-                    zonesTenTo: 1,
+                    zonesTenTo: 6,
                     centerScoreStyle: .withX,
                     centerCrosshairSize: 4,
                     scheme: .vertical,
