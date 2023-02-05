@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomNavBarView: View {
-    
+    @EnvironmentObject var appTheme : AppColorTheme
     @Environment(\.presentationMode) var presentationMode
     let showBackButton :Bool
     let title : String
@@ -29,10 +29,10 @@ struct CustomNavBarView: View {
             }
         }
         .padding()
-        .foregroundColor(Color.appTheme.text)
+        .foregroundColor(appTheme.text)
         .font(.headline)
         .background(
-            Color.appTheme.accent
+            appTheme.accent
                 .ignoresSafeArea(edges: .top)
         )
         

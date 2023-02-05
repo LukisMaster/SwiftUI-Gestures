@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SessionRowView: View {
+    @EnvironmentObject var appTheme : AppColorTheme
     
     var body: some View {
         HStack(spacing: 0) {
@@ -59,7 +60,7 @@ struct SessionRowView: View {
         }
         .lineLimit(1)
         .font(.subheadline)
-        .foregroundColor(.appTheme.text)
+        .foregroundColor(appTheme.text)
     }
 }
 

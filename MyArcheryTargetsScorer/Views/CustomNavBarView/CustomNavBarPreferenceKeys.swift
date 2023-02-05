@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-//@State private var showBackButton = true
-//@State private var title = "Title"
-//@State private var subtitle: String?
-
 struct CustomNavBarTitlePreferenceKey: PreferenceKey {
     static var defaultValue: String = ""
     

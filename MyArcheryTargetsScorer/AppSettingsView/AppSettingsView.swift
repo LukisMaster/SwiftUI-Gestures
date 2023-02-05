@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AppSettingsView: View {
+    @EnvironmentObject var appTheme : AppColorTheme
     @StateObject var viewModel : AppSettingsViewModel
     var dateFormatter : DateFormatter {
         let formatter = DateFormatter()
@@ -16,49 +17,88 @@ struct AppSettingsView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             List {
                 Section {
                     ListTextFieldView(title: "First name: ", text: $viewModel.firstName)
+                        .foregroundColor(appTheme.text)
                     ListTextFieldView(title: "Last name: ", text: $viewModel.lastName)
+                        .foregroundColor(appTheme.text)
                     DatePicker(
                         "Birthday: ",
                         selection: $viewModel.birthday,
                         in: ...Date(),
                         displayedComponents: [.date]
                     )
+                    .foregroundColor(appTheme.text)
                     ListTextFieldView(title: "Club:", text: $viewModel.club)
+                        .foregroundColor(appTheme.text)
                 } header: {
-                    Text("User Profile")
+                    HStack {
+                        Text("User Profile")
+                            .font(.headline)
+                            .foregroundColor(appTheme.text)
+                            .padding()
+                        Spacer()
+                    }
+                    .background(appTheme.accent)
+                    .listRowInsets(EdgeInsets(
+                        top: 0,
+                        leading: 0,
+                        bottom: 0,
+                        trailing: 0))
                 }
+                .listRowBackground(appTheme.background)
 
+                
                 Section {
                     HStack {
                         Text("Main color")
-                        Picker("Color Theme", selection: $viewModel.selectedColorScheme) {
-                            ForEach(viewModel.colorSchemes, id: \.self) { option in
-                                Text(option.rawValue)
-                                    .tag(option)
+                            .foregroundColor(appTheme.text)
+                        Picker(selection: $appTheme.colorThemePickerIndex) {
+                            ForEach(0..<appTheme.appThemesCount, id: \.self) { index in
+                                Text(appTheme.appThemeNames[index])
+                                    .tag(index)
                             }
+                        } label: {
+                            Text("Color Theme")
                         }
                         .pickerStyle(.segmented)
-                        Spacer()
+                        .colorMultiply(appTheme.accent)
                     }
                 } header: {
-                    Text("Color Theme")
+                    HStack {
+                        Text("Color Theme")
+                            .font(.headline)
+                            .foregroundColor(appTheme.text)
+                            .padding()
+                        Spacer()
+                    }
+                    .background(appTheme.accent)
+                    .listRowInsets(EdgeInsets(
+                        top: 0,
+                        leading: 0,
+                        bottom: 0,
+                        trailing: 0))
+                    
                 }
+                .listRowBackground(appTheme.background)
 
+                
             }
+            .listStyle(.plain)
+
         }
-        .navigationTitle("App settings")
+        .customNavigationTitle("App settings")
     }
+        
+    
 }
 
 struct AppSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        CustomNavView {
             AppSettingsView(viewModel: AppSettingsViewModel())
-                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

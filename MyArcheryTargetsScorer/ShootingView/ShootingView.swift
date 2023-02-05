@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ShootingView: View {
-        
+    @EnvironmentObject var appTheme : AppColorTheme
     @StateObject var viewModel : ShootingViewModel
     
     var body: some View {
@@ -57,7 +57,7 @@ struct ShootingView: View {
                 ZStack {
                     Circle()
                         .frame(width: viewModel.markCircleSize, height: viewModel.markCircleSize)
-                        .foregroundColor(Color.appTheme.markerColor)
+                        .foregroundColor(appTheme.markerColor)
                     Text(viewModel.markScoreText)
                         .font(.system(size: viewModel.markScoreFontSize))
                 }

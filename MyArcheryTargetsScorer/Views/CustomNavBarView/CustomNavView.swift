@@ -29,7 +29,7 @@ struct CustomNavView<Content: View>: View {
 struct CustomNavView_Previews: PreviewProvider {
     static var previews: some View {
         CustomNavView {
-            Color.appTheme.background
+                Text("Hello, World!")
         }
     }
 }

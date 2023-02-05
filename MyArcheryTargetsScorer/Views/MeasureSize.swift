@@ -11,7 +11,7 @@ struct TargetViewGeometrySizePreferenceKey: PreferenceKey {
   static var defaultValue: CGSize = .zero
 
   static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
- //   value = nextValue()
+ //   value = nextValue() //вроде бы надо, но почему-то не работало с этой строкой =/
   }
 }
 

@@ -28,6 +28,7 @@
 		2DB2FCED298B1B9E0088AD11 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCEC298B1B9E0088AD11 /* CustomNavView.swift */; };
 		2DB2FCEF298B1D1F0088AD11 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCEE298B1D1F0088AD11 /* CustomNavLink.swift */; };
 		2DB2FCF1298B215F0088AD11 /* CustomNavBarPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCF0298B215F0088AD11 /* CustomNavBarPreferenceKeys.swift */; };
+		2DB2FCF5298C29DA0088AD11 /* AppColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2FCF4298C29DA0088AD11 /* AppColorTheme.swift */; };
 		2DCB1E65298414B60043D5C5 /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB1E64298414B60043D5C5 /* AppSettingsView.swift */; };
 		2DCB1E67298414D50043D5C5 /* AppSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB1E66298414D50043D5C5 /* AppSettingsViewModel.swift */; };
 		2DCB1E6A298428D60043D5C5 /* ArcheryEquipmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCB1E69298428D60043D5C5 /* ArcheryEquipmentsView.swift */; };
@@ -66,6 +67,7 @@
 		2DB2FCEC298B1B9E0088AD11 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		2DB2FCEE298B1D1F0088AD11 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		2DB2FCF0298B215F0088AD11 /* CustomNavBarPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKeys.swift; sourceTree = "<group>"; };
+		2DB2FCF4298C29DA0088AD11 /* AppColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorTheme.swift; sourceTree = "<group>"; };
 		2DCB1E64298414B60043D5C5 /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 		2DCB1E66298414D50043D5C5 /* AppSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewModel.swift; sourceTree = "<group>"; };
 		2DCB1E69298428D60043D5C5 /* ArcheryEquipmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcheryEquipmentsView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		2D61EE322931408000CAF482 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				2DB2FCF4298C29DA0088AD11 /* AppColorTheme.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				2DECB1C2297DF0AB00B1C7D1 /* LukisArcheryScorer.xcdatamodeld in Sources */,
 				2D9EF0092929368800AE8505 /* MyArcheryTargetsScorer.swift in Sources */,
 				2DCB1E6A298428D60043D5C5 /* ArcheryEquipmentsView.swift in Sources */,
+				2DB2FCF5298C29DA0088AD11 /* AppColorTheme.swift in Sources */,
 				2D5F4EF0292BA16B00F36311 /* TargetFace.swift in Sources */,
 				2D8FD74A2985A2D300E30E33 /* UserProfile.swift in Sources */,
 				2DECB1C1297C61CD00B1C7D1 /* RoundRules.swift in Sources */,

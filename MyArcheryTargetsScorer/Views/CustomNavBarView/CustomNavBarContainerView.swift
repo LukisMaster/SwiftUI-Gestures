@@ -39,10 +39,10 @@ struct CustomNavBarContainerView<Content: View>: View {
 }
 
 struct CustomNavBarContainerView_Previews: PreviewProvider {
+    
     static var previews: some View {
         CustomNavBarContainerView {
             ZStack {
-                Color.appTheme.background
                 Text("Hello, world! ")
                     .customNavigationTitle("New title")
                     .customNavigationSubtitle("Subtitle")

@@ -8,32 +8,38 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject private var viewModel : HomeViewModel
+    @EnvironmentObject var appTheme : AppColorTheme
+    @ObservedObject private var viewModel = HomeViewModel()
     
     var body: some View {
-        VStack{
+        VStack(spacing: 0){
             
             // last trainings
             List{
                 ForEach(0..<20) { index in
-                    SessionRowView()
-                        .listRowInsets(.init(top: 10, leading: 5, bottom: 10, trailing: 5))
+                        SessionRowView()
+                            .listRowInsets(.init(top: 10, leading: 5, bottom: 10, trailing: 5))
+                            .overlay(CustomNavLink(destination:
+                                                    Text("Shooting Session number \(index)")
+                                                        .customNavigationTitle("Shooting Session")
+                                                  ) {
+                                EmptyView()
+                            })
                 }
-                .listRowBackground(Color.appTheme.background)
+                .listRowBackground(appTheme.background)
                 
             }
-            .listStyle(PlainListStyle())
-            .background(Color.appTheme.background)
+            .listStyle(.plain)
+            .background(appTheme.background)
             
+            Divider()
             // main menu buttons
             LazyVGrid(columns: viewModel.mainMenuGridColumns) {
                 ForEach (0..<4) { menuItemIndex in
-                    NavigationLink {
-                        viewModel.presentView(menuIndex: menuItemIndex)
-                    } label: {
+                    CustomNavLink (destination: viewModel.presentView(menuIndex: menuItemIndex)) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(Color.appTheme.accent)
+                                .foregroundColor(appTheme.accent)
                             VStack {
                                 Image(viewModel.menuLabelImages[menuItemIndex])
                                     .resizable()
@@ -42,7 +48,7 @@ struct HomeView: View {
                                     .foregroundColor(.white)
                                 Text(viewModel.menuLabelTexts[menuItemIndex])
                                     .fontWeight(.bold)
-                                    .foregroundColor(Color.appTheme.text)
+                                    .foregroundColor(appTheme.text)
                             }
                         }
                         .frame(height: 100)
@@ -51,15 +57,19 @@ struct HomeView: View {
                 
             }
             .padding()
-            .background(Color.appTheme.background)
+            .background(
+                appTheme.background
+                    .ignoresSafeArea()
+            )
         }
     }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
             .previewDevice("iPhone 11")
-            .environmentObject(HomeViewModel())
+//            .environmentObject(HomeViewModel())
     }
 }

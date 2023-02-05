@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct MyArcheryTargetsScorerApp: App {
-    @StateObject var viewModel = HomeViewModel()
+    @StateObject var colorViewModel = AppColorTheme()
     
     init() {
         UITableView.appearance().backgroundColor = UIColor.clear
@@ -19,9 +19,9 @@ struct MyArcheryTargetsScorerApp: App {
         WindowGroup {
             CustomNavView {
                 HomeView()
-                    .environmentObject(viewModel)
                     .customNavBarItems(title: "My Archery Target Scorer", subtitle: nil, backButtonHidden: true)
             }
+            .environmentObject(colorViewModel)
         }
     }
 }
