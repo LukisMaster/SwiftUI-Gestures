@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AppSettingsView: View {
-    @EnvironmentObject var appTheme : AppColorTheme
+    @EnvironmentObject var appTheme : AppColorThemeViewModel
     @StateObject var viewModel : AppSettingsViewModel
     var dateFormatter : DateFormatter {
         let formatter = DateFormatter()

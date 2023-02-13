@@ -10,10 +10,10 @@ import CoreData
 final class CoreDataManager {
     
     static let instance = CoreDataManager()
-    let container : NSPersistentContainer
+    private let container : NSPersistentContainer
     let context : NSManagedObjectContext
     
-    init () {
+    private init () {
         container = NSPersistentContainer(name: "LukisArcheryScorer")
         container.loadPersistentStores { description, error in
             if  let error = error {
@@ -29,7 +29,7 @@ final class CoreDataManager {
             print("Data saved successfully")
         } catch {
             context.rollback()
-            print("Error save Core Data \n\(error) \n\(error.localizedDescription)")
+            print("Error saving Core Data \n\(error) \n\(error.localizedDescription)")
         }
     }
 }

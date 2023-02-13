@@ -31,6 +31,7 @@ struct CustomNavView_Previews: PreviewProvider {
         CustomNavView {
                 Text("Hello, World!")
         }
+        .environmentObject(AppColorThemeViewModel())
     }
 }
 

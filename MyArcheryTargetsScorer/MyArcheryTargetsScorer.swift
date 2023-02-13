@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct MyArcheryTargetsScorerApp: App {
-    @StateObject var colorViewModel = AppColorTheme()
+    @StateObject var colorViewModel = AppColorThemeViewModel()
     
     init() {
         UITableView.appearance().backgroundColor = UIColor.clear

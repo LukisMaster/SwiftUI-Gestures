@@ -10,7 +10,8 @@ import SwiftUI
 struct CustomNavBarContainerView<Content: View>: View {
     
     let content : Content
-    
+    @State private var leftBarItems: AnyView? = nil
+    @State private var rightBarItems: AnyView? = nil
     @State private var showBackButton = true
     @State private var title = ""
     @State private var subtitle: String? = nil
@@ -22,7 +23,13 @@ struct CustomNavBarContainerView<Content: View>: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            CustomNavBarView(showBackButton: showBackButton, title: title, subtitle: subtitle)
+            CustomNavBarView(
+                showBackButton: showBackButton,
+                title: title,
+                subtitle: subtitle,
+                leftBarItems: leftBarItems,
+                rightBarItems: rightBarItems
+            )
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
@@ -35,6 +42,12 @@ struct CustomNavBarContainerView<Content: View>: View {
         .onPreferenceChange(CustomNavBarBackButtonHiddenPreferenceKey.self) { value in
             self.showBackButton = !value
         }
+        .onPreferenceChange(CustomNavBarItemsLeading.self) { value in
+            self.leftBarItems = value?.view
+        }
+        .onPreferenceChange(CustomNavBarItemsTrailing.self) { value in
+            self.rightBarItems = value?.view
+        }
     }
 }
 
@@ -46,8 +59,16 @@ struct CustomNavBarContainerView_Previews: PreviewProvider {
                 Text("Hello, world! ")
                     .customNavigationTitle("New title")
                     .customNavigationSubtitle("Subtitle")
-                    .customNavigationBarBackButtonHidden(true)
+                    .customNavigationBackButtonHidden(false)
+                    .customNavBarSideItems(leading: EmptyView(),trailing: Text("privet"))
             }
         }
+        .environmentObject(AppColorThemeViewModel())
+    }
+}
+
+extension Button: Equatable {
+    public static func == (lhs: Button, rhs: Button) -> Bool {
+        true
     }
 }

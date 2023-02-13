@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ShootingView: View {
-    @EnvironmentObject var appTheme : AppColorTheme
+    @EnvironmentObject var appTheme : AppColorThemeViewModel
     @StateObject var viewModel : ShootingViewModel
     
     var body: some View {

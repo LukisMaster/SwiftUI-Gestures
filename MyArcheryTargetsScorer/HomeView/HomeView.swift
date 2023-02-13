@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var appTheme : AppColorTheme
+    @EnvironmentObject var appTheme : AppColorThemeViewModel
     @ObservedObject private var viewModel = HomeViewModel()
     
     var body: some View {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SessionRowView: View {
-    @EnvironmentObject var appTheme : AppColorTheme
+    @EnvironmentObject var appTheme : AppColorThemeViewModel
     
     var body: some View {
         HStack(spacing: 0) {

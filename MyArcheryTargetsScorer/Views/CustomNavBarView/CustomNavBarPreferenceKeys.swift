@@ -34,6 +34,22 @@ struct CustomNavBarBackButtonHiddenPreferenceKey: PreferenceKey {
     
 }
 
+struct CustomNavBarItemsLeading: PreferenceKey {
+    static var defaultValue: CustomNavBarItem?
+    
+    static func reduce(value: inout CustomNavBarItem?, nextValue: () -> CustomNavBarItem?) {
+        value = nextValue()
+    }
+}
+
+struct CustomNavBarItemsTrailing: PreferenceKey {
+    static var defaultValue: CustomNavBarItem?
+    
+    static func reduce(value: inout CustomNavBarItem?, nextValue: () -> CustomNavBarItem?) {
+        value = nextValue()
+    }
+}
+
 extension View {
 
     func customNavigationTitle (_ title: String) -> some View {
@@ -44,15 +60,21 @@ extension View {
         preference(key: CustomNavBarSubtitlePreferenceKey.self, value: subtitle)
     }
     
-    func customNavigationBarBackButtonHidden (_ hidden: Bool) -> some View {
+    func customNavigationBackButtonHidden (_ hidden: Bool) -> some View {
         preference(key: CustomNavBarBackButtonHiddenPreferenceKey.self, value: hidden)
     }
     
-    func customNavBarItems (title: String = "", subtitle: String? = nil, backButtonHidden: Bool = false) -> some View {
+    func customNavBarSideItems<LView: View, TView: View>(leading: LView, trailing: TView) -> some View {
+        self
+            .preference(key: CustomNavBarItemsLeading.self, value: CustomNavBarItem(leading))
+            .preference(key: CustomNavBarItemsTrailing.self, value: CustomNavBarItem(trailing))
+    }
+    
+    func customNavBarItems (title: String = "", subtitle: String? = nil, backButtonHidden: Bool = false, rightBar: CustomNavBarItem? = nil) -> some View {
         self
             .customNavigationTitle(title)
             .customNavigationSubtitle(subtitle)
-            .customNavigationBarBackButtonHidden(backButtonHidden)
+            .customNavigationBackButtonHidden(backButtonHidden)
     }
     
 }

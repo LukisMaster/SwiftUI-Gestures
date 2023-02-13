@@ -60,8 +60,8 @@
     <entity name="UserProfileEntity" representedClassName="UserProfileEntity" syncable="YES" codeGenerationType="class">
         <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="club" optional="YES" attributeType="String"/>
-        <attribute name="firstname" optional="YES" attributeType="String"/>
-        <attribute name="lastname" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="ArrowsEntity" positionX="-144" positionY="-9" width="128" height="89"/>

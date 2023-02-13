@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct CustomNavBarView: View {
-    @EnvironmentObject var appTheme : AppColorTheme
+    @EnvironmentObject var appTheme : AppColorThemeViewModel
     @Environment(\.presentationMode) var presentationMode
     let showBackButton :Bool
     let title : String
     let subtitle: String?
-    
+    let leftBarItems: AnyView?
+    let rightBarItems: AnyView?
     
     var body: some View {
-        HStack {
-            if showBackButton {
-                backButton
-            }
-            Spacer()
+        ZStack {
             titleSection
-            Spacer()
-            if showBackButton {
-                backButton
-                    .opacity(0)
+            HStack {
+                if showBackButton {
+                    backButton
+                }
+                leftBarItems
+                Spacer()
+                rightBarItems
             }
         }
         .padding()
@@ -44,7 +44,14 @@ struct CustomNavBarView: View {
 struct CustomNavBarView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CustomNavBarView(showBackButton: true, title: "Title", subtitle: "Subtitle goes here")
+            CustomNavBarView(
+                showBackButton: true,
+                title: "Title",
+                subtitle: "Subtitle goes here",
+                leftBarItems: AnyView(Text("ALO")),
+                rightBarItems: AnyView(Image(systemName: "checkmark"))
+            )
+            .environmentObject(AppColorThemeViewModel())
             Spacer()
         }
     }

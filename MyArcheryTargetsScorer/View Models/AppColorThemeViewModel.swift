@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol AppColorThemeProtocol {
+protocol AppColorThemeViewModelProtocol {
     //settings
     var appThemesCount : Int { get }
     var colorThemePickerIndex : Int { get }
@@ -20,7 +20,7 @@ protocol AppColorThemeProtocol {
     var markerColor: Color { get }
 }
 
-class AppColorTheme : ObservableObject, AppColorThemeProtocol {
+class AppColorThemeViewModel : ObservableObject, AppColorThemeViewModelProtocol {
     
     struct ColorTheme {
         let name: String
