@@ -90,6 +90,7 @@ struct AppSettingsView: View {
 
         }
         .customNavigationTitle("App settings")
+        .customNavBarTrailingItems(trailing: saveButton)
     }
         
     
@@ -100,8 +101,21 @@ struct AppSettingsView_Previews: PreviewProvider {
         CustomNavView {
             AppSettingsView(viewModel: AppSettingsViewModel())
         }
+        .environmentObject(AppColorThemeViewModel())
     }
 }
+
+extension AppSettingsView {
+    private var saveButton: some View {
+        Button {
+            viewModel.changeSettings()
+        } label: {
+            Image(systemName: "checkmark")
+        }
+        
+    }
+}
+
 
 // MARK: - ListTextFieldView
 

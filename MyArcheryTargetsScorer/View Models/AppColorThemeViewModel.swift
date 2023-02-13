@@ -59,7 +59,11 @@ class AppColorThemeViewModel : ObservableObject, AppColorThemeViewModelProtocol 
     }
     
     // settings
-    @Published var colorThemePickerIndex : Int = 0
+    @Published var colorThemePickerIndex : Int = 0 {
+        didSet {
+            self.objectWillChange.send()
+        }
+    }
     
     var appThemeNames: [String]
     

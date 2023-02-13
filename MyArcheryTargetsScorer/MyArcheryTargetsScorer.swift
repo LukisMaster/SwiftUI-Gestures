@@ -18,7 +18,7 @@ struct MyArcheryTargetsScorerApp: App {
     var body: some Scene {
         WindowGroup {
             CustomNavView {
-                HomeView()
+                HomeView(viewModel: HomeViewModel())
                     .customNavBarItems(title: "My Archery Target Scorer", subtitle: nil, backButtonHidden: true)
             }
             .environmentObject(colorViewModel)

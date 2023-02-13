@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomNavLink<Label: View, Destination: View>: View {
     let destination : Destination
-    let label : Label
+    var label : Label
     
     init(destination: Destination, @ViewBuilder label: ()->Label) {
         self.destination = destination
@@ -30,11 +30,14 @@ struct CustomNavLink<Label: View, Destination: View>: View {
 }
 
 struct CustomNavLink_Previews: PreviewProvider {
+
     static var previews: some View {
         CustomNavView {
             CustomNavLink(destination: Text("Destination")) {
                 Text("Click me")
+                    .foregroundColor(AppColorThemeViewModel().text)
             }
         }
+        .environmentObject(AppColorThemeViewModel())
     }
 }

@@ -64,13 +64,27 @@ extension View {
         preference(key: CustomNavBarBackButtonHiddenPreferenceKey.self, value: hidden)
     }
     
-    func customNavBarSideItems<LView: View, TView: View>(leading: LView, trailing: TView) -> some View {
+    func customNavBarLeadingItems<LView: View>(leading: LView) -> some View {
         self
             .preference(key: CustomNavBarItemsLeading.self, value: CustomNavBarItem(leading))
+    }
+    
+    func customNavBarTrailingItems<TView: View>(trailing: TView) -> some View {
+        self
             .preference(key: CustomNavBarItemsTrailing.self, value: CustomNavBarItem(trailing))
     }
     
-    func customNavBarItems (title: String = "", subtitle: String? = nil, backButtonHidden: Bool = false, rightBar: CustomNavBarItem? = nil) -> some View {
+    func customNavBarSideItems<LView: View, TView: View>(leading: LView, trailing: TView) -> some View {
+        self
+            .customNavBarLeadingItems(leading: leading)
+            .customNavBarTrailingItems(trailing: trailing)
+    }
+    
+    func customNavBarItems (
+        title: String = "",
+        subtitle: String? = nil,
+        backButtonHidden: Bool = false
+    ) -> some View {
         self
             .customNavigationTitle(title)
             .customNavigationSubtitle(subtitle)

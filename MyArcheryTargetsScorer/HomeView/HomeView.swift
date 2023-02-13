@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var appTheme : AppColorThemeViewModel
-    @ObservedObject private var viewModel = HomeViewModel()
+    @StateObject var viewModel : HomeViewModel
     
     var body: some View {
         VStack(spacing: 0){
@@ -21,7 +21,7 @@ struct HomeView: View {
                             .listRowInsets(.init(top: 10, leading: 5, bottom: 10, trailing: 5))
                             .overlay(CustomNavLink(destination:
                                                     Text("Shooting Session number \(index)")
-                                                        .customNavigationTitle("Shooting Session")
+                                                        .customNavigationTitle("Shooting Session \(index)")
                                                   ) {
                                 EmptyView()
                             })
@@ -33,26 +33,30 @@ struct HomeView: View {
             .background(appTheme.background)
             
             Divider()
+            
             // main menu buttons
             LazyVGrid(columns: viewModel.mainMenuGridColumns) {
+                
                 ForEach (0..<4) { menuItemIndex in
-                    CustomNavLink (destination: viewModel.presentView(menuIndex: menuItemIndex)) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(appTheme.accent)
-                            VStack {
-                                Image(viewModel.menuLabelImages[menuItemIndex])
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
-                                    .foregroundColor(.white)
-                                Text(viewModel.menuLabelTexts[menuItemIndex])
-                                    .fontWeight(.bold)
-                                    .foregroundColor(appTheme.text)
-                            }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(appTheme.accent)
+                        VStack {
+                            Image(viewModel.menuLabelImages[menuItemIndex])
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                            Text(viewModel.menuLabelTexts[menuItemIndex])
+                                .fontWeight(.bold)
+                                .foregroundColor(appTheme.text)
                         }
-                        .frame(height: 100)
                     }
+                    .frame(height: 100)
+                    .overlay(CustomNavLink(destination:
+                                            viewModel.presentView(menuIndex: menuItemIndex)
+                                          ) {
+                        Color.clear
+                    })
                 }
                 
             }
@@ -68,8 +72,10 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
-            .previewDevice("iPhone 11")
-//            .environmentObject(HomeViewModel())
+        CustomNavView{
+            HomeView(viewModel: HomeViewModel())
+        }
+        .environmentObject(AppColorThemeViewModel())
+        .previewDevice("iPhone 11")
     }
 }

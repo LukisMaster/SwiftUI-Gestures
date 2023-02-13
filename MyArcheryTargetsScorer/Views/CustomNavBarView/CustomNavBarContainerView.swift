@@ -10,8 +10,8 @@ import SwiftUI
 struct CustomNavBarContainerView<Content: View>: View {
     
     let content : Content
-    @State private var leftBarItems: AnyView? = nil
-    @State private var rightBarItems: AnyView? = nil
+    @State private var leftBarItems: AnyView = AnyView(EmptyView())
+    @State private var rightBarItems: AnyView = AnyView(EmptyView())
     @State private var showBackButton = true
     @State private var title = ""
     @State private var subtitle: String? = nil
@@ -43,10 +43,10 @@ struct CustomNavBarContainerView<Content: View>: View {
             self.showBackButton = !value
         }
         .onPreferenceChange(CustomNavBarItemsLeading.self) { value in
-            self.leftBarItems = value?.view
+            self.leftBarItems = value?.view ?? AnyView(EmptyView())
         }
         .onPreferenceChange(CustomNavBarItemsTrailing.self) { value in
-            self.rightBarItems = value?.view
+            self.rightBarItems = value?.view ?? AnyView(EmptyView())
         }
     }
 }
@@ -57,6 +57,7 @@ struct CustomNavBarContainerView_Previews: PreviewProvider {
         CustomNavBarContainerView {
             ZStack {
                 Text("Hello, world! ")
+                    .foregroundColor(AppColorThemeViewModel().text)
                     .customNavigationTitle("New title")
                     .customNavigationSubtitle("Subtitle")
                     .customNavigationBackButtonHidden(false)
